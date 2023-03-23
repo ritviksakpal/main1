@@ -1,1 +1,321 @@
+/* colors 
+#333333 black
+#3083dc blue
+#B1E5F2 sky blue
+
+font family 
+
+font-family: 'Allura', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+
+*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  color: #eee;
+  background-color: #333333;
+  height: 100px;
+}
+
+.logo a {
+  font-family: "Allura", cursive;
+  font-size: 2em;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  padding: 15px 30px;
+  margin-left: 80px;
+  text-decoration: none;
+  color: #eee;
+  transition: all ease-in-out 0.4s;
+}
+.navbar ul li a:hover {
+  color: #3083dc;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  background-color: #eee;
+}
+
+/* banner */
+.banner {
+  height: 100vh;
+  background-image: url("./img/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: black;
+  overflow: hidden;
+  background: #c33764; /* fallback colour. Make sure this is just one solid colour. */
+  background: -webkit-linear-gradient(rgba(0, 0, 2, 0.8), rgba(195, 55, 99, 0)),
+    url("./img/banner.jpg");
+  background: linear-gradient(rgba(0, 0, 2, 0.8), rgba(195, 55, 99, 0)),
+    url("./img/banner.jpg"); /* The least supported option. */
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5em;
+}
+
+.banner h3 {
+  font-family: "Source Code Pro", monospace;
+}
+
+.banner .pbutton {
+  text-decoration: none;
+  margin: 80px 0 0 0;
+  color: #eee;
+  background-color: #3083dc;
+  padding: 15px 25px;
+  border-radius: 30px;
+}
+/* project */
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+
+.pgroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.aggred {
+  margin: 60px 0;
+  font-size: 3em;
+}
+
+/* .project {
+  width: 800px;
+  height: 389px; 
+  margin: 0 50px; 
+} */
+.project a img {
+  width: 800px;
+  height: 389px;
+}
+
+.p1 {
+  margin-right: 50px;
+}
+/* .p1 {
+  background-image: url("./img/project1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+}
+.p2 {
+  background-image: url("./img/project2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+} */
+
+/* about */
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 100px 100px 100px;
+  background-color: #333333;
+  color: #eee;
+}
+.astuff {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simg img {
+  height: 500px;
+  width: 396px;
+}
+
+.desc p {
+  padding: 0 0 0 100px;
+  line-height: 45px;
+  text-align: justify;
+}
+
+/* contact */
+
+.contactme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0 100px 0;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.social {
+  margin: 0 50px;
+}
+
+.social img {
+  height: 100px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #333333;
+  color: #eee;
+}
+
+/* responsive */
+
+@media (max-width: 1600px) {
+  .project a img {
+    width: 500px;
+    height: 244px;
+  }
+
+  .p1 {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .navbar ul li a {
+    margin-left: 40px;
+  }
+
+  /* about */
+  .desc p {
+    padding: 0 0 0 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .navbar ul li a {
+    margin-left: 30px;
+  }
+  .pgroup {
+    flex-direction: column;
+  }
+  .p1 {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  /* about */
+  .astuff {
+    flex-direction: column;
+  }
+  .desc p {
+    padding: 50px 50px 0 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    padding: 0 50px;
+  }
+  .navbar ul li a {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 850px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: absolute;
+    right: -100%;
+    top: 100px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #333333;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .about {
+    padding: 0 0 100px 0;
+  }
+  .aggred {
+    margin: 60px 0;
+    font-size: 2em;}
+}
 
